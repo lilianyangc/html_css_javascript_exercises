@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+/* !important: place this to reset the html and body before starting*/
+body,html{
+    height: 100%;
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 180%;
+    color: #666;
+    text-align: center;
+}
+
+.parallax1 {
+    background: url('img/first.jpeg');
+    /* amount of space in the screen*/
+    min-height: 100%; 
+}
+.parallax2 {
+    background: url('img/second.jpeg');
+    min-height: 60%; 
+}
+.parallax3 {
+    background: url('img/third.jpeg');
+    min-height: 40%;
+}
+.parallax4 {
+    background: url('img/fourth.jpeg');
+    min-height: 100%;
+}
+
+.parallax1, .parallax2, .parallax3, .parallax4 {
+    position: relative;
+    /* giving it a kind of white look */
+    opacity: .75;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.heading{
+    position: absolute;
+    color: #fff;
+    font-size: 550%;
+    /* move down from top */
+    top: 38%;
+    /* makes the content centered */
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    text-shadow: 0 0 10px #000;
+}
+
+.heading-sm {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    color: #fff;
+    font-size: 250%;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 0 0 10px #000;
+}
+
+.two-col{
+    /* since it is floated, section won't be able to see the content 
+    Fix: we have to add overflow:auto in section */
+    float: left; 
+    width: 42%;
+    padding: 0 4%;
+    text-align: left;
+}
+
+section {
+    /* add this to show white background where two-col is */
+    overflow: auto;
+    padding: 50px 80px;
+}
+
+.dark{
+    overflow: auto;
+    padding: 50px 80px;
+    background-color: #323232;
+    color: #f2f2f2;
+}
+
+/* ------------------------------- now we add our media queries*/
+
+@media (max-width: 768px){
+    .heading{
+        font-size:  250%;
+    }
+    .heading-sm{
+        font-size: 180%;
+    }
+    .two-col{
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+    
+}
